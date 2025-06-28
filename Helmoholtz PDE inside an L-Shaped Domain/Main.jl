@@ -9,7 +9,7 @@ GO = Lmesh(step1);
 
 # Define the function as an anonymous function
 s = 0.05;
-k = 8.0; # If k = 0 then we have the Poisson Equation (Because we have division by zero errors use eps(Float64) instead of 0). The bigger k is we have more peaks
+k = 10.0; # If k = 0 then we have the Poisson Equation (Because we have division by zero errors use eps(Float64) instead of 0). The bigger k is we have more peaks
 f = (x, y) -> (-1/(2*pi*s^2)) * exp(-((x+0.5).^2 + (y-0.5).^2) / (2*s^2)) + (-1/(2*pi*s^2)) * exp(-((x-0.5).^2 + (y+0.5).^2) / (2*s^2));
 
 println("Building global FEM matrices (k=$k)...");
@@ -45,8 +45,8 @@ println("\n--- Solving with k=$k ---")
     # u = Conj_Grad(K1, F_global1, tol, 1000);
     # u = GMRes(K1, F_global1, tol, max_restarts = Nmax);
     # u = pcdGMRes(K1, F_global1, tol, Nmax, K_sub_factors, idx; restart_len = krylov_dim_gmres);
-    # u = pcdCG(K1, F_global1, tol, K_sub_factors, idx, 500);
-    u = MGpcdCG(K1, F_global1, tol, idx, mg_hierarchies_list, Nmax, omega, nPre, nPost);
+    u = pcdCG(K1, F_global1, tol, K_sub_factors, idx, 500);
+    # u = MGpcdCG(K1, F_global1, tol, idx, mg_hierarchies_list, Nmax, omega, nPre, nPost);
 end
 
 
