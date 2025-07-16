@@ -3,7 +3,7 @@
 - This repository contains the solution of an **Ihomogenous Helmoholtz PDE inside an L-Shaped Domain** written in Julia.
 
 
-- The PDE is solved using various **numerical methods** as a project for the course "Advanced Scientific Calculation" at my university, Democritus University of Thrace.
+- The PDE is solved using various **numerical methods** as a project for the course "Advanced Scientific Calculations" at my university, Democritus University of Thrace.
 
 
 - The methods used are:
