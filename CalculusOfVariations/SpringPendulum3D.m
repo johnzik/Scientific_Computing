@@ -55,7 +55,7 @@ hold on;
 plot3(0, 0, 0, 'ro', 'MarkerSize', 8, 'MarkerFaceColor', 'r');
 legend('Mass Trajectory', 'Pivot Point (V=0)');
 
-figure;
+% figure;
 comet3(x, y, z);
 grid on;
 title('Trajectory of Sping Pendulum');

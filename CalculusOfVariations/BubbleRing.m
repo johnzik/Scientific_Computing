@@ -41,7 +41,7 @@ y_3D = y_radius .* cos(THETA);
 z_3D = y_radius .* sin(THETA);
 
 figure;
-surf(x_3D, y_3D, z_3D, 'EdgeColor', 'none', 'FaceAlpha', 0.8); title('3D Solution Bubble');
+surf(x_3D, y_3D, z_3D, 'EdgeColor', 'none', 'FaceAlpha', 0.6); title('3D Solution Bubble');
 hold on;
 
 % Plot the rings

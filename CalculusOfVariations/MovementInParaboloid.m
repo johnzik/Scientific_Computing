@@ -10,7 +10,7 @@ Tmax = 10;
 r0 = 2;
 phi0 = pi/2;
 z0 = 4;
-dr0 = 2;
+dr0 = 3;
 dphi0 = 4.43; % dphi0 = 4.43 & dr0 = 0 for circle around z-axis
 dz0 = 0;
 

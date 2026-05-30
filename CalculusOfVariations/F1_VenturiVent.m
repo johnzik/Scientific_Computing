@@ -2,7 +2,7 @@ clc;
 clear; 
 
 % Constants
-A0 = 0.15;  % A0 = x m^2 is the cross-section area under y(x)
+A0 = 0.6;  % A0 = x m^2 is the cross-section area under y(x)
 
 % Initial guess
 x0 = [-0.1; -0.1];
@@ -20,7 +20,10 @@ disp(F(real(x), A0));
 x = real(x);
 t = 0:0.001:1;
 y = (-1/x(1)) * sqrt( 1 - (x(1)*t).^2 ) + x(2);
-plot(t,y);xlabel('x');ylabel('y');
+plot(t,y, 'LineWidth', 3);
+xlabel('x');
+ylabel('y');
+title(['Optimal Arc for Venturi Vent with Cross-Sectional Area A0: ', num2str(A0), 'm^2']);
 hold on;
 grid on;
 axis equal;
